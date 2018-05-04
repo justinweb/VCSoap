@@ -39,6 +39,15 @@
     <ClInclude Include="soapOuterRCAVMvouServiceSoapProxy.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
+    <ClInclude Include="tinyxml2.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveInParam.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveOutParam.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="soapC.cpp">
@@ -57,6 +66,15 @@
       <Filter>來源檔案</Filter>
     </ClCompile>
     <ClCompile Include="soapOuterRCAVMvouServiceSoapProxy.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml2.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveInParam.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveOutParam.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
   </ItemGroup>

@@ -116,6 +116,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="move.h" />
+    <ClInclude Include="MoveInParam.h" />
+    <ClInclude Include="MoveOutParam.h" />
     <ClInclude Include="soapH.h" />
     <ClInclude Include="soapOuterRCAVMvinServiceSoap12Proxy.h" />
     <ClInclude Include="soapOuterRCAVMvinServiceSoapProxy.h" />
@@ -123,14 +125,18 @@
     <ClInclude Include="soapOuterRCAVMvouServiceSoapProxy.h" />
     <ClInclude Include="soapStub.h" />
     <ClInclude Include="stdsoap2.h" />
+    <ClInclude Include="tinyxml2.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MoveInParam.cpp" />
+    <ClCompile Include="MoveOutParam.cpp" />
     <ClCompile Include="soapC.cpp" />
     <ClCompile Include="soapOuterRCAVMvinServiceSoap12Proxy.cpp" />
     <ClCompile Include="soapOuterRCAVMvinServiceSoapProxy.cpp" />
     <ClCompile Include="soapOuterRCAVMvouServiceSoap12Proxy.cpp" />
     <ClCompile Include="soapOuterRCAVMvouServiceSoapProxy.cpp" />
     <ClCompile Include="stdsoap2.cpp" />
+    <ClCompile Include="tinyxml2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
