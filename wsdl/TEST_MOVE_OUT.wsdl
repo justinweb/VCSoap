@@ -1,0 +1,65 @@
+  <?xml version="1.0" encoding="utf-8" ?> 
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:types>
+<s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+<s:element name="DoOuterRCAVMvou">
+<s:complexType>
+<s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="xmlInput" type="s:string" /> 
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+<s:element name="DoOuterRCAVMvouResponse">
+<s:complexType>
+<s:sequence>
+  <s:element minOccurs="0" maxOccurs="1" name="DoOuterRCAVMvouResult" type="s:string" /> 
+  </s:sequence>
+  </s:complexType>
+  </s:element>
+  </s:schema>
+  </wsdl:types>
+<wsdl:message name="DoOuterRCAVMvouSoapIn">
+  <wsdl:part name="parameters" element="tns:DoOuterRCAVMvou" /> 
+  </wsdl:message>
+<wsdl:message name="DoOuterRCAVMvouSoapOut">
+  <wsdl:part name="parameters" element="tns:DoOuterRCAVMvouResponse" /> 
+  </wsdl:message>
+<wsdl:portType name="OuterRCAVMvouServiceSoap">
+<wsdl:operation name="DoOuterRCAVMvou">
+  <wsdl:input message="tns:DoOuterRCAVMvouSoapIn" /> 
+  <wsdl:output message="tns:DoOuterRCAVMvouSoapOut" /> 
+  </wsdl:operation>
+  </wsdl:portType>
+<wsdl:binding name="OuterRCAVMvouServiceSoap" type="tns:OuterRCAVMvouServiceSoap">
+  <soap:binding transport="http://schemas.xmlsoap.org/soap/http" /> 
+<wsdl:operation name="DoOuterRCAVMvou">
+  <soap:operation soapAction="http://tempuri.org/DoOuterRCAVMvou" style="document" /> 
+<wsdl:input>
+  <soap:body use="literal" /> 
+  </wsdl:input>
+<wsdl:output>
+  <soap:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+  </wsdl:binding>
+<wsdl:binding name="OuterRCAVMvouServiceSoap12" type="tns:OuterRCAVMvouServiceSoap">
+  <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" /> 
+<wsdl:operation name="DoOuterRCAVMvou">
+  <soap12:operation soapAction="http://tempuri.org/DoOuterRCAVMvou" style="document" /> 
+<wsdl:input>
+  <soap12:body use="literal" /> 
+  </wsdl:input>
+<wsdl:output>
+  <soap12:body use="literal" /> 
+  </wsdl:output>
+  </wsdl:operation>
+  </wsdl:binding>
+<wsdl:service name="OuterRCAVMvouService">
+<wsdl:port name="OuterRCAVMvouServiceSoap" binding="tns:OuterRCAVMvouServiceSoap">
+  <soap:address location="http://tncmes07/COG/ChipMOS/WebService/OuterRCAVMvouService.asmx" /> 
+  </wsdl:port>
+<wsdl:port name="OuterRCAVMvouServiceSoap12" binding="tns:OuterRCAVMvouServiceSoap12">
+  <soap12:address location="http://tncmes07/COG/ChipMOS/WebService/OuterRCAVMvouService.asmx" /> 
+  </wsdl:port>
+  </wsdl:service>
+  </wsdl:definitions>
