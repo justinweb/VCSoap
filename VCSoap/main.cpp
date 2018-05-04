@@ -28,6 +28,9 @@ void TestMoveIn()
 
 	inParam.xmlInput = &xmlInputData;
 	service.DoOuterRCAVMvin(&inParam, output);
+	// 如果要指定呼叫的網址的話可以用
+	std::string url("http://tncmes07/COG/ChipMOS/WebService/OuterRCAVMvinService.asmx"), function("http://tempuri.org/DoOuterRCAVMvin");
+	service.DoOuterRCAVMvin(url.c_str(), function.c_str(), &inParam, output);
 
 	std::string errorMsg;
 	if (min.FromXml(output.DoOuterRCAVMvinResult->c_str(), errorMsg) == false) {
@@ -63,6 +66,9 @@ void TestMoveOut()
 
 	inParam.xmlInput = &xmlInputData;
 	service.DoOuterRCAVMvou(&inParam, output);
+	// 如果要指定呼叫的網址的話可以用
+	std::string url("http://tncmes07/COG/ChipMOS/WebService/OuterRCAVMvouService.asmx"), function("http://tempuri.org/DoOuterRCAVMvou");
+	service.DoOuterRCAVMvou( url.c_str(), function.c_str(), &inParam, output);
 
 	std::string errorMsg;
 	if (mout.FromXml(output.DoOuterRCAVMvouResult->c_str(), errorMsg) == false) {
