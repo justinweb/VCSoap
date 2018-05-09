@@ -19,7 +19,7 @@ namespace VCSoapUtil {
 		/// \param xml 要用來解析的xml
 		/// \param errorMsg 傳回錯誤訊息
 		/// \return 成功與否
-		bool FromXml(const std::string xml, std::string errorMsg);
+		bool FromXml(const std::string xml, std::string& errorMsg);
 	public:
 		std::string ASSY_LOT;
 		std::string OPER;

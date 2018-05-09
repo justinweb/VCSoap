@@ -126,6 +126,7 @@
     <ClInclude Include="soapStub.h" />
     <ClInclude Include="stdsoap2.h" />
     <ClInclude Include="tinyxml2.h" />
+    <ClInclude Include="XMLHelper.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MoveInParam.cpp" />
@@ -137,6 +138,7 @@
     <ClCompile Include="soapOuterRCAVMvouServiceSoapProxy.cpp" />
     <ClCompile Include="stdsoap2.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
+    <ClCompile Include="XMLHelper.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

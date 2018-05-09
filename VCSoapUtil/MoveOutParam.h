@@ -12,7 +12,7 @@ namespace VCSoapUtil {
 	public:
 		struct FailInfo {
 			std::string Fail_Code;
-			std::string Fail_Qty;
+			int Fail_Qty;
 
 			std::string ToXml() const;
 		};

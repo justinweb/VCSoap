@@ -3,6 +3,7 @@
 #include <sstream>
 
 #include "tinyxml2.h"
+#include "XMLHelper.h"
 
 namespace VCSoapUtil {
 
@@ -56,38 +57,21 @@ namespace VCSoapUtil {
 			errorMsg = "Parse xml failed";
 			return false;
 		}
-
-		tinyxml2::XMLNode* pNodeString = xmlDoc.FirstChildElement("string");
-		if (pNodeString == NULL) {
-			errorMsg = "Missing element : string";
-			return false;
-		}
-
-		tinyxml2::XMLNode* pNodeChipMOS = pNodeString->FirstChildElement("ChipMOS");
+		
+		tinyxml2::XMLElement* pNodeChipMOS = xmlDoc.FirstChildElement("ChipMOS");
 		if (pNodeChipMOS == NULL) {
 			errorMsg = "Missing element : ChipMOS";
 			return false;
 		}
-		tinyxml2::XMLNode* pNodeMSGINFO = pNodeChipMOS->FirstChildElement("MSGINFO");
+		tinyxml2::XMLElement* pNodeMSGINFO = pNodeChipMOS->FirstChildElement("MSGINFO");
 		if (pNodeMSGINFO == NULL) {
 			errorMsg = "Missing element : MSGINFO";
 			return false;
 		}
-		tinyxml2::XMLNode* pNode = pNodeMSGINFO->FirstChildElement("RESULT");
-		if (pNode) {
-			Result = pNode->ToText()->Value();
-		}
-		else {
-			Result = "";
-		}
-		pNode = pNodeMSGINFO->FirstChildElement("RESULT_MESSAGE");
-		if (pNode) {
-			Result_Message = pNode->ToText()->Value();
-		}
-		else {
-			Result_Message = "";
-		}
 
+		Result = XMLHelper::GetElementText(pNodeMSGINFO, "RESULT");
+		Result_Message = XMLHelper::GetElementText(pNodeMSGINFO, "RESULT_MESSAGE");
+		
 		return true;
 	}
 
